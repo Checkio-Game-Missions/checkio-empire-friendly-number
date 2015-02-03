@@ -1,0 +1,4 @@
+**Precondition:**
+```python
+a < b
+```
