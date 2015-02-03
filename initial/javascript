@@ -1,12 +1,16 @@
-function checkio(data) {
-    return 1;
+function friendly_number(number, base, decimals, suffix, powers) {
+    base = base || 1000;
+    decimals = decimals || 0;
+    suffix = suffix || "";
+    powers = powers || ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'];
+    return String(number);
 }
 
-//
+
 //if __name__ == '__main__':
 //    # These "asserts" using only for self-checking and not necessary for auto-testing
-//    assert check_line(["X", "Z", "X"]) == True
-//    assert check_line(["X", "Z", "X", "X"]) == False
-//    assert check_line(["X", "Z"]) == True
-//    assert check_line(["Z", "X"]) == True
-//    assert check_line(["Z", "X", "Z", "X", "Z", "Z", "X"]) == False
+//    assert friendly_number(102) == '102', '102'
+//    assert friendly_number(10240) == '10k', '10k'
+//    assert friendly_number(12341234, decimals=1) == '12.3M', '12.3M'
+//    assert friendly_number(12461, decimals=1) == '12.5k', '12.5k'
+//    assert friendly_number(1024000000, base=1024, suffix='iB') == '976MiB', '976MiB'
