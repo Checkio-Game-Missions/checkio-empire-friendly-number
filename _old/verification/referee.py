@@ -48,5 +48,5 @@ api.add_listener(
             'python-27': cover_both,  # or None
             'python-3': cover_both
         },
-        function_name='friendly_number'
+        DEFAULT_FUNCTION_NAME='friendly_number'
     ).on_ready)
