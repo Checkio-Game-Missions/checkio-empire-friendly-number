@@ -9,7 +9,7 @@ def cover(f, data):
     return f(data[0], **data[1])
 '''
 
-def py_repr(f, data):
+def py_repr(data, f):
     number = data["input"][0]
     keywords = data["input"][1]
     res = "{}({}".format(f, number)
