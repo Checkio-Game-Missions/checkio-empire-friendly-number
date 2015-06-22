@@ -1,4 +1,4 @@
-from checkio_referee import RefereeBase
+from checkio_referee import RefereeBase, covercodes, representations, ENV_NAME
 
 
 import settings_env
@@ -24,12 +24,11 @@ class Referee(RefereeBase):
 
     DEFAULT_FUNCTION_NAME = "friendly_number"
     ENV_COVERCODE = {
-        "python_2": cover_unwrap_with_keywords,
-        "python_3": cover_unwrap_with_keywords,
-        "javascript": None
+        ENV_NAME.PYTHON: cover_unwrap_with_keywords,
+        ENV_NAME.JS_NODE: covercodes.js_unwrap_args
     }
     CALLED_REPRESENTATIONS = {
         "python_2": py_repr,
         "python_3": py_repr,
-        "javascript": None
+        ENV_NAME.JS_NODE: representations.unwrap_arg_representation
     }
