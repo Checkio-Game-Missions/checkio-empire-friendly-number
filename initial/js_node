@@ -8,6 +8,9 @@ function friendlyNumber(number, options){
     return String(number);
 }
 
+var assert = require("assert");
+
+
 if (!global.is_checking){
     // These "asserts" using only for self-checking and not necessary for auto-testing
     assert.equal(friendlyNumber(102), '102', '102');
