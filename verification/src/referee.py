@@ -23,12 +23,15 @@ class Referee(RefereeBase):
     ENVIRONMENTS = settings_env.ENVIRONMENTS
 
     DEFAULT_FUNCTION_NAME = "friendly_number"
+    FUNCTION_NAMES = {
+        ENV_NAME.JS_NODE: "friendlyNumber"
+    }
+
     ENV_COVERCODE = {
         ENV_NAME.PYTHON: cover_unwrap_with_keywords,
         ENV_NAME.JS_NODE: covercodes.js_unwrap_args
     }
     CALLED_REPRESENTATIONS = {
-        "python_2": py_repr,
-        "python_3": py_repr,
+        ENV_NAME.PYTHON: py_repr,
         ENV_NAME.JS_NODE: representations.unwrap_arg_representation
     }
