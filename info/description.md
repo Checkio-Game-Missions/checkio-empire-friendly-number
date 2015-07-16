@@ -1,16 +1,16 @@
-You should write a function for converting a **number** in to string using several rules.
+You should write a function for converting a **number** into a string following several rules.
 First of all, you will need to cut the number with a given base (**base** argument; default 1000).
 The value is a float number with decimal after the point (**decimals** argument; default 0).
-For the value, use the rounding towards zero rule (5.6⇒5, -5.6⇒-5) if the decimal = 0,
+For the value, use the rounding to zero rule (5.6⇒5, -5.6⇒-5) if the decimal = 0,
 otherwise use the standard rounding procedure.
-If the number of decimals is greater than the current number of digits after dot, trail value with zeroes.
+If the number of decimals is greater than the current number of digits after dot, trail the value with zeroes.
 The number should be a value with letters designating the power.
 You will be given a list of power designations 
 (**powers** argument; default ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y']).
-If you are given suffix (**suffix** argument; default ‘’) , then you must append it.
+If you are given suffix (**suffix** argument; default ‘’), then you must append it.
 If you don’t have enough powers, stay at the maximum.
 
-And zero is always zero without powers, but with a suffix.
+Zero is always zero without powers, but with a suffix.
 
 Let's look at some examples:
 
